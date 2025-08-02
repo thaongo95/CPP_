@@ -1,0 +1,3 @@
+/home/thao/Work/seeProjects/classC/encapsulation/build/CMakeFiles/rebuild_cache.dir
+/home/thao/Work/seeProjects/classC/encapsulation/build/CMakeFiles/edit_cache.dir
+/home/thao/Work/seeProjects/classC/encapsulation/build/CMakeFiles/Encapsule.dir

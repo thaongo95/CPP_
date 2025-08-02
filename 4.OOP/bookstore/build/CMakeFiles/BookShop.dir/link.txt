@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/BookShop.dir/main.cpp.o CMakeFiles/BookShop.dir/book/book.cpp.o CMakeFiles/BookShop.dir/bookshop/bookshop.cpp.o  -o BookShop   -L/home/thao/Work/seeProjects/bookstore/book  -L/home/thao/Work/seeProjects/bookstore/bookshop 

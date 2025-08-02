@@ -1,0 +1,2 @@
+/usr/bin/ar qc libFunctions.a CMakeFiles/Functions.dir/image_functions.cpp.o CMakeFiles/Functions.dir/video_functions.cpp.o CMakeFiles/Functions.dir/app_tools.cpp.o CMakeFiles/Functions.dir/interactive_image.cpp.o CMakeFiles/Functions.dir/interactive_video.cpp.o
+/usr/bin/ranlib libFunctions.a

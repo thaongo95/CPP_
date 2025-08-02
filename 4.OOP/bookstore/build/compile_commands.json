@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/thao/Work/seeProjects/bookstore/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++11 -o CMakeFiles/BookShop.dir/main.cpp.o -c /home/thao/Work/seeProjects/bookstore/main.cpp",
+  "file": "/home/thao/Work/seeProjects/bookstore/main.cpp"
+},
+{
+  "directory": "/home/thao/Work/seeProjects/bookstore/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++11 -o CMakeFiles/BookShop.dir/book/book.cpp.o -c /home/thao/Work/seeProjects/bookstore/book/book.cpp",
+  "file": "/home/thao/Work/seeProjects/bookstore/book/book.cpp"
+},
+{
+  "directory": "/home/thao/Work/seeProjects/bookstore/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++11 -o CMakeFiles/BookShop.dir/bookshop/bookshop.cpp.o -c /home/thao/Work/seeProjects/bookstore/bookshop/bookshop.cpp",
+  "file": "/home/thao/Work/seeProjects/bookstore/bookshop/bookshop.cpp"
+}
+]

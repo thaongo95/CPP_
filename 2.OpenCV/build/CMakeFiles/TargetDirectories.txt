@@ -1,0 +1,6 @@
+/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles/App.dir
+/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles/edit_cache.dir
+/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles/rebuild_cache.dir
+/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src/CMakeFiles/Functions.dir
+/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src/CMakeFiles/edit_cache.dir
+/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src/CMakeFiles/rebuild_cache.dir

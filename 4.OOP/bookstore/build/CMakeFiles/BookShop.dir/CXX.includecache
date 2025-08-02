@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thao/Work/seeProjects/bookstore/book/book.h
+string
+-
+iostream
+-
+
+/home/thao/Work/seeProjects/bookstore/bookshop/bookshop.cpp
+bookshop.h
+/home/thao/Work/seeProjects/bookstore/bookshop/bookshop.h
+fstream
+-
+iomanip
+-
+iostream
+-
+
+/home/thao/Work/seeProjects/bookstore/bookshop/bookshop.h
+vector
+-
+algorithm
+-
+../book/book.h
+/home/thao/Work/seeProjects/bookstore/book/book.h
+
+/home/thao/Work/seeProjects/bookstore/main.cpp
+book/book.h
+/home/thao/Work/seeProjects/bookstore/book/book.h
+bookshop/bookshop.h
+/home/thao/Work/seeProjects/bookstore/bookshop/bookshop.h
+vector
+-
+

@@ -1,0 +1,5 @@
+/home/b6/Works/bin/Tutorial
+/home/b6/Works/include/TutorialConfig.h
+/home/b6/Works/lib/libMathFunctions.a
+/home/b6/Works/lib/libSqrtLibrary.a
+/home/b6/Works/include/MathFunctions.h

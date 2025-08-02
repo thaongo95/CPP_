@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/RUN.dir/main.cpp.o CMakeFiles/RUN.dir/book/book.cpp.o CMakeFiles/RUN.dir/bookshop/bookshop.cpp.o  -o RUN   -L/home/thao/Work/seeProjects/bookstore/book  -L/home/thao/Work/seeProjects/bookstore/bookshop 

@@ -1,0 +1,3 @@
+/home/thao/Work/seeProjects/chapter7/build/CMakeFiles/edit_cache.dir
+/home/thao/Work/seeProjects/chapter7/build/CMakeFiles/rebuild_cache.dir
+/home/thao/Work/seeProjects/chapter7/build/CMakeFiles/CHAPTER7.dir
