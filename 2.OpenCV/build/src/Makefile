@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/b6/Works/Cpp_practive_vscode/2.OpenCV
+CMAKE_SOURCE_DIR = /home/b6/Works/Cpp_/2.OpenCV
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build
+CMAKE_BINARY_DIR = /home/b6/Works/Cpp_/2.OpenCV/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src//CMakeFiles/progress.marks
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles 0
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles /home/b6/Works/Cpp_/2.OpenCV/build/src//CMakeFiles/progress.marks
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/Functions.dir/rule:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Functions.dir/rule
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Functions.dir/rule
 .PHONY : src/CMakeFiles/Functions.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ Functions: src/CMakeFiles/Functions.dir/rule
 
 # fast build rule for target.
 Functions/fast:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/build
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/build
 .PHONY : Functions/fast
 
 app_tools.o: app_tools.cpp.o
@@ -135,7 +135,7 @@ app_tools.o: app_tools.cpp.o
 
 # target to build an object file
 app_tools.cpp.o:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/app_tools.cpp.o
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/app_tools.cpp.o
 .PHONY : app_tools.cpp.o
 
 app_tools.i: app_tools.cpp.i
@@ -143,7 +143,7 @@ app_tools.i: app_tools.cpp.i
 
 # target to preprocess a source file
 app_tools.cpp.i:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/app_tools.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/app_tools.cpp.i
 .PHONY : app_tools.cpp.i
 
 app_tools.s: app_tools.cpp.s
@@ -151,15 +151,39 @@ app_tools.s: app_tools.cpp.s
 
 # target to generate assembly for a file
 app_tools.cpp.s:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/app_tools.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/app_tools.cpp.s
 .PHONY : app_tools.cpp.s
+
+document_scan.o: document_scan.cpp.o
+.PHONY : document_scan.o
+
+# target to build an object file
+document_scan.cpp.o:
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/document_scan.cpp.o
+.PHONY : document_scan.cpp.o
+
+document_scan.i: document_scan.cpp.i
+.PHONY : document_scan.i
+
+# target to preprocess a source file
+document_scan.cpp.i:
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/document_scan.cpp.i
+.PHONY : document_scan.cpp.i
+
+document_scan.s: document_scan.cpp.s
+.PHONY : document_scan.s
+
+# target to generate assembly for a file
+document_scan.cpp.s:
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/document_scan.cpp.s
+.PHONY : document_scan.cpp.s
 
 image_functions.o: image_functions.cpp.o
 .PHONY : image_functions.o
 
 # target to build an object file
 image_functions.cpp.o:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/image_functions.cpp.o
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/image_functions.cpp.o
 .PHONY : image_functions.cpp.o
 
 image_functions.i: image_functions.cpp.i
@@ -167,7 +191,7 @@ image_functions.i: image_functions.cpp.i
 
 # target to preprocess a source file
 image_functions.cpp.i:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/image_functions.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/image_functions.cpp.i
 .PHONY : image_functions.cpp.i
 
 image_functions.s: image_functions.cpp.s
@@ -175,7 +199,7 @@ image_functions.s: image_functions.cpp.s
 
 # target to generate assembly for a file
 image_functions.cpp.s:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/image_functions.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/image_functions.cpp.s
 .PHONY : image_functions.cpp.s
 
 interactive_image.o: interactive_image.cpp.o
@@ -183,7 +207,7 @@ interactive_image.o: interactive_image.cpp.o
 
 # target to build an object file
 interactive_image.cpp.o:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_image.cpp.o
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_image.cpp.o
 .PHONY : interactive_image.cpp.o
 
 interactive_image.i: interactive_image.cpp.i
@@ -191,7 +215,7 @@ interactive_image.i: interactive_image.cpp.i
 
 # target to preprocess a source file
 interactive_image.cpp.i:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_image.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_image.cpp.i
 .PHONY : interactive_image.cpp.i
 
 interactive_image.s: interactive_image.cpp.s
@@ -199,7 +223,7 @@ interactive_image.s: interactive_image.cpp.s
 
 # target to generate assembly for a file
 interactive_image.cpp.s:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_image.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_image.cpp.s
 .PHONY : interactive_image.cpp.s
 
 interactive_video.o: interactive_video.cpp.o
@@ -207,7 +231,7 @@ interactive_video.o: interactive_video.cpp.o
 
 # target to build an object file
 interactive_video.cpp.o:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_video.cpp.o
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_video.cpp.o
 .PHONY : interactive_video.cpp.o
 
 interactive_video.i: interactive_video.cpp.i
@@ -215,7 +239,7 @@ interactive_video.i: interactive_video.cpp.i
 
 # target to preprocess a source file
 interactive_video.cpp.i:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_video.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_video.cpp.i
 .PHONY : interactive_video.cpp.i
 
 interactive_video.s: interactive_video.cpp.s
@@ -223,7 +247,7 @@ interactive_video.s: interactive_video.cpp.s
 
 # target to generate assembly for a file
 interactive_video.cpp.s:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_video.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/interactive_video.cpp.s
 .PHONY : interactive_video.cpp.s
 
 video_functions.o: video_functions.cpp.o
@@ -231,7 +255,7 @@ video_functions.o: video_functions.cpp.o
 
 # target to build an object file
 video_functions.cpp.o:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/video_functions.cpp.o
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/video_functions.cpp.o
 .PHONY : video_functions.cpp.o
 
 video_functions.i: video_functions.cpp.i
@@ -239,7 +263,7 @@ video_functions.i: video_functions.cpp.i
 
 # target to preprocess a source file
 video_functions.cpp.i:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/video_functions.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/video_functions.cpp.i
 .PHONY : video_functions.cpp.i
 
 video_functions.s: video_functions.cpp.s
@@ -247,7 +271,7 @@ video_functions.s: video_functions.cpp.s
 
 # target to generate assembly for a file
 video_functions.cpp.s:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/video_functions.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Functions.dir/build.make src/CMakeFiles/Functions.dir/video_functions.cpp.s
 .PHONY : video_functions.cpp.s
 
 # Help Target
@@ -262,6 +286,9 @@ help:
 	@echo "... app_tools.o"
 	@echo "... app_tools.i"
 	@echo "... app_tools.s"
+	@echo "... document_scan.o"
+	@echo "... document_scan.i"
+	@echo "... document_scan.s"
 	@echo "... image_functions.o"
 	@echo "... image_functions.i"
 	@echo "... image_functions.s"
@@ -285,6 +312,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

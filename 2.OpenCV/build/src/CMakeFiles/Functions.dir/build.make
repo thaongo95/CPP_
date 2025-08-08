@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/b6/Works/Cpp_practive_vscode/2.OpenCV
+CMAKE_SOURCE_DIR = /home/b6/Works/Cpp_/2.OpenCV
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build
+CMAKE_BINARY_DIR = /home/b6/Works/Cpp_/2.OpenCV/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/Functions.dir/depend.make
@@ -72,72 +72,86 @@ include src/CMakeFiles/Functions.dir/flags.make
 src/CMakeFiles/Functions.dir/image_functions.cpp.o: src/CMakeFiles/Functions.dir/flags.make
 src/CMakeFiles/Functions.dir/image_functions.cpp.o: ../src/image_functions.cpp
 src/CMakeFiles/Functions.dir/image_functions.cpp.o: src/CMakeFiles/Functions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/Functions.dir/image_functions.cpp.o"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/image_functions.cpp.o -MF CMakeFiles/Functions.dir/image_functions.cpp.o.d -o CMakeFiles/Functions.dir/image_functions.cpp.o -c /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/image_functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/Functions.dir/image_functions.cpp.o"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/image_functions.cpp.o -MF CMakeFiles/Functions.dir/image_functions.cpp.o.d -o CMakeFiles/Functions.dir/image_functions.cpp.o -c /home/b6/Works/Cpp_/2.OpenCV/src/image_functions.cpp
 
 src/CMakeFiles/Functions.dir/image_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/image_functions.cpp.i"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/image_functions.cpp > CMakeFiles/Functions.dir/image_functions.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_/2.OpenCV/src/image_functions.cpp > CMakeFiles/Functions.dir/image_functions.cpp.i
 
 src/CMakeFiles/Functions.dir/image_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/image_functions.cpp.s"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/image_functions.cpp -o CMakeFiles/Functions.dir/image_functions.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_/2.OpenCV/src/image_functions.cpp -o CMakeFiles/Functions.dir/image_functions.cpp.s
 
 src/CMakeFiles/Functions.dir/video_functions.cpp.o: src/CMakeFiles/Functions.dir/flags.make
 src/CMakeFiles/Functions.dir/video_functions.cpp.o: ../src/video_functions.cpp
 src/CMakeFiles/Functions.dir/video_functions.cpp.o: src/CMakeFiles/Functions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/Functions.dir/video_functions.cpp.o"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/video_functions.cpp.o -MF CMakeFiles/Functions.dir/video_functions.cpp.o.d -o CMakeFiles/Functions.dir/video_functions.cpp.o -c /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/video_functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/Functions.dir/video_functions.cpp.o"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/video_functions.cpp.o -MF CMakeFiles/Functions.dir/video_functions.cpp.o.d -o CMakeFiles/Functions.dir/video_functions.cpp.o -c /home/b6/Works/Cpp_/2.OpenCV/src/video_functions.cpp
 
 src/CMakeFiles/Functions.dir/video_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/video_functions.cpp.i"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/video_functions.cpp > CMakeFiles/Functions.dir/video_functions.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_/2.OpenCV/src/video_functions.cpp > CMakeFiles/Functions.dir/video_functions.cpp.i
 
 src/CMakeFiles/Functions.dir/video_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/video_functions.cpp.s"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/video_functions.cpp -o CMakeFiles/Functions.dir/video_functions.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_/2.OpenCV/src/video_functions.cpp -o CMakeFiles/Functions.dir/video_functions.cpp.s
 
 src/CMakeFiles/Functions.dir/app_tools.cpp.o: src/CMakeFiles/Functions.dir/flags.make
 src/CMakeFiles/Functions.dir/app_tools.cpp.o: ../src/app_tools.cpp
 src/CMakeFiles/Functions.dir/app_tools.cpp.o: src/CMakeFiles/Functions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/Functions.dir/app_tools.cpp.o"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/app_tools.cpp.o -MF CMakeFiles/Functions.dir/app_tools.cpp.o.d -o CMakeFiles/Functions.dir/app_tools.cpp.o -c /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/app_tools.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/Functions.dir/app_tools.cpp.o"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/app_tools.cpp.o -MF CMakeFiles/Functions.dir/app_tools.cpp.o.d -o CMakeFiles/Functions.dir/app_tools.cpp.o -c /home/b6/Works/Cpp_/2.OpenCV/src/app_tools.cpp
 
 src/CMakeFiles/Functions.dir/app_tools.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/app_tools.cpp.i"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/app_tools.cpp > CMakeFiles/Functions.dir/app_tools.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_/2.OpenCV/src/app_tools.cpp > CMakeFiles/Functions.dir/app_tools.cpp.i
 
 src/CMakeFiles/Functions.dir/app_tools.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/app_tools.cpp.s"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/app_tools.cpp -o CMakeFiles/Functions.dir/app_tools.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_/2.OpenCV/src/app_tools.cpp -o CMakeFiles/Functions.dir/app_tools.cpp.s
 
 src/CMakeFiles/Functions.dir/interactive_image.cpp.o: src/CMakeFiles/Functions.dir/flags.make
 src/CMakeFiles/Functions.dir/interactive_image.cpp.o: ../src/interactive_image.cpp
 src/CMakeFiles/Functions.dir/interactive_image.cpp.o: src/CMakeFiles/Functions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/Functions.dir/interactive_image.cpp.o"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/interactive_image.cpp.o -MF CMakeFiles/Functions.dir/interactive_image.cpp.o.d -o CMakeFiles/Functions.dir/interactive_image.cpp.o -c /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/Functions.dir/interactive_image.cpp.o"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/interactive_image.cpp.o -MF CMakeFiles/Functions.dir/interactive_image.cpp.o.d -o CMakeFiles/Functions.dir/interactive_image.cpp.o -c /home/b6/Works/Cpp_/2.OpenCV/src/interactive_image.cpp
 
 src/CMakeFiles/Functions.dir/interactive_image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/interactive_image.cpp.i"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_image.cpp > CMakeFiles/Functions.dir/interactive_image.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_/2.OpenCV/src/interactive_image.cpp > CMakeFiles/Functions.dir/interactive_image.cpp.i
 
 src/CMakeFiles/Functions.dir/interactive_image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/interactive_image.cpp.s"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_image.cpp -o CMakeFiles/Functions.dir/interactive_image.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_/2.OpenCV/src/interactive_image.cpp -o CMakeFiles/Functions.dir/interactive_image.cpp.s
 
 src/CMakeFiles/Functions.dir/interactive_video.cpp.o: src/CMakeFiles/Functions.dir/flags.make
 src/CMakeFiles/Functions.dir/interactive_video.cpp.o: ../src/interactive_video.cpp
 src/CMakeFiles/Functions.dir/interactive_video.cpp.o: src/CMakeFiles/Functions.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/Functions.dir/interactive_video.cpp.o"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/interactive_video.cpp.o -MF CMakeFiles/Functions.dir/interactive_video.cpp.o.d -o CMakeFiles/Functions.dir/interactive_video.cpp.o -c /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_video.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/Functions.dir/interactive_video.cpp.o"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/interactive_video.cpp.o -MF CMakeFiles/Functions.dir/interactive_video.cpp.o.d -o CMakeFiles/Functions.dir/interactive_video.cpp.o -c /home/b6/Works/Cpp_/2.OpenCV/src/interactive_video.cpp
 
 src/CMakeFiles/Functions.dir/interactive_video.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/interactive_video.cpp.i"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_video.cpp > CMakeFiles/Functions.dir/interactive_video.cpp.i
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_/2.OpenCV/src/interactive_video.cpp > CMakeFiles/Functions.dir/interactive_video.cpp.i
 
 src/CMakeFiles/Functions.dir/interactive_video.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/interactive_video.cpp.s"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_video.cpp -o CMakeFiles/Functions.dir/interactive_video.cpp.s
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_/2.OpenCV/src/interactive_video.cpp -o CMakeFiles/Functions.dir/interactive_video.cpp.s
+
+src/CMakeFiles/Functions.dir/document_scan.cpp.o: src/CMakeFiles/Functions.dir/flags.make
+src/CMakeFiles/Functions.dir/document_scan.cpp.o: ../src/document_scan.cpp
+src/CMakeFiles/Functions.dir/document_scan.cpp.o: src/CMakeFiles/Functions.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/Functions.dir/document_scan.cpp.o"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Functions.dir/document_scan.cpp.o -MF CMakeFiles/Functions.dir/document_scan.cpp.o.d -o CMakeFiles/Functions.dir/document_scan.cpp.o -c /home/b6/Works/Cpp_/2.OpenCV/src/document_scan.cpp
+
+src/CMakeFiles/Functions.dir/document_scan.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Functions.dir/document_scan.cpp.i"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/b6/Works/Cpp_/2.OpenCV/src/document_scan.cpp > CMakeFiles/Functions.dir/document_scan.cpp.i
+
+src/CMakeFiles/Functions.dir/document_scan.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Functions.dir/document_scan.cpp.s"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/b6/Works/Cpp_/2.OpenCV/src/document_scan.cpp -o CMakeFiles/Functions.dir/document_scan.cpp.s
 
 # Object files for target Functions
 Functions_OBJECTS = \
@@ -145,7 +159,8 @@ Functions_OBJECTS = \
 "CMakeFiles/Functions.dir/video_functions.cpp.o" \
 "CMakeFiles/Functions.dir/app_tools.cpp.o" \
 "CMakeFiles/Functions.dir/interactive_image.cpp.o" \
-"CMakeFiles/Functions.dir/interactive_video.cpp.o"
+"CMakeFiles/Functions.dir/interactive_video.cpp.o" \
+"CMakeFiles/Functions.dir/document_scan.cpp.o"
 
 # External object files for target Functions
 Functions_EXTERNAL_OBJECTS =
@@ -155,21 +170,22 @@ src/libFunctions.a: src/CMakeFiles/Functions.dir/video_functions.cpp.o
 src/libFunctions.a: src/CMakeFiles/Functions.dir/app_tools.cpp.o
 src/libFunctions.a: src/CMakeFiles/Functions.dir/interactive_image.cpp.o
 src/libFunctions.a: src/CMakeFiles/Functions.dir/interactive_video.cpp.o
+src/libFunctions.a: src/CMakeFiles/Functions.dir/document_scan.cpp.o
 src/libFunctions.a: src/CMakeFiles/Functions.dir/build.make
 src/libFunctions.a: src/CMakeFiles/Functions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libFunctions.a"
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && $(CMAKE_COMMAND) -P CMakeFiles/Functions.dir/cmake_clean_target.cmake
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Functions.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/b6/Works/Cpp_/2.OpenCV/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libFunctions.a"
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && $(CMAKE_COMMAND) -P CMakeFiles/Functions.dir/cmake_clean_target.cmake
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Functions.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/Functions.dir/build: src/libFunctions.a
 .PHONY : src/CMakeFiles/Functions.dir/build
 
 src/CMakeFiles/Functions.dir/clean:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src && $(CMAKE_COMMAND) -P CMakeFiles/Functions.dir/cmake_clean.cmake
+	cd /home/b6/Works/Cpp_/2.OpenCV/build/src && $(CMAKE_COMMAND) -P CMakeFiles/Functions.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/Functions.dir/clean
 
 src/CMakeFiles/Functions.dir/depend:
-	cd /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/b6/Works/Cpp_practive_vscode/2.OpenCV /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src /home/b6/Works/Cpp_practive_vscode/2.OpenCV/build/src/CMakeFiles/Functions.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/b6/Works/Cpp_/2.OpenCV/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/b6/Works/Cpp_/2.OpenCV /home/b6/Works/Cpp_/2.OpenCV/src /home/b6/Works/Cpp_/2.OpenCV/build /home/b6/Works/Cpp_/2.OpenCV/build/src /home/b6/Works/Cpp_/2.OpenCV/build/src/CMakeFiles/Functions.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/Functions.dir/depend
 

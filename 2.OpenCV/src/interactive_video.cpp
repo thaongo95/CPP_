@@ -25,11 +25,11 @@ void interactive_video(const std::string& source){
 	}
 	cv::Mat frame, hsv_frame, mask;
 	createTrackbars();
-	cv::setTrackbarPos("H_MIN", trackbarName, 90);
-	cv::setTrackbarPos("H_MAX", trackbarName, 130);
-	cv::setTrackbarPos("S_MIN", trackbarName, 80);
+	cv::setTrackbarPos("H_MIN", trackbarName, 0);
+	cv::setTrackbarPos("H_MAX", trackbarName, 25);
+	cv::setTrackbarPos("S_MIN", trackbarName, 100);
 	cv::setTrackbarPos("S_MAX", trackbarName, 255);
-	cv::setTrackbarPos("V_MIN", trackbarName, 90);
+	cv::setTrackbarPos("V_MIN", trackbarName, 100);
 	cv::setTrackbarPos("V_MAX", trackbarName, 255);
 	while (true){
 		bool success = cap.read(frame);
@@ -52,21 +52,16 @@ void interactive_video(const std::string& source){
 		std::vector<std::vector<cv::Point>> contours;
 		cv::findContours(mask, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
 		
-		double max_area = 0;
-		int largest_index = -1;
 		for (size_t i=0; i< contours.size(); i++){
 			double area = cv::contourArea(contours[i]);
-			if (area > max_area){
-				max_area = area;
-				largest_index = i;
+			if (area > 100){
+				// Get the bounding rectangle for the largest contour
+		    		cv::Rect bounding_rect = cv::boundingRect(contours[i]);
+		    		// Draw the rectangle on the original frame
+		    		cv::rectangle(frame, bounding_rect, cv::Scalar(0, 255, 0), 2);
 			}
 		}
-		if (largest_index != -1) {
-		    // Get the bounding rectangle for the largest contour
-		    cv::Rect bounding_rect = cv::boundingRect(contours[largest_index]);
-		    // Draw the rectangle on the original frame
-		    cv::rectangle(frame, bounding_rect, cv::Scalar(0, 255, 0), 2);
-		}
+		
  		cv::imshow("Original Frame", frame);
 		cv::imshow("Mask", mask);
 		if (cv::waitKey(20)=='q') break;

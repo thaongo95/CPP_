@@ -1,7 +1,7 @@
 src/CMakeFiles/Functions.dir/video_functions.cpp.o: \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/video_functions.cpp \
+ /home/b6/Works/Cpp_/2.OpenCV/src/video_functions.cpp \
  /usr/include/stdc-predef.h \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/video_functions.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/video_functions.h \
  /usr/local/include/opencv4/opencv2/opencv.hpp \
  /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/local/include/opencv4/opencv2/core.hpp \
@@ -364,4 +364,5 @@ src/CMakeFiles/Functions.dir/video_functions.cpp.o: \
  /usr/local/include/opencv4/opencv2/video.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/image_functions.h
+ /home/b6/Works/Cpp_/2.OpenCV/src/image_functions.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/app_tools.h

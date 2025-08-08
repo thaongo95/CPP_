@@ -1,5 +1,4 @@
-CMakeFiles/App.dir/main.cpp.o: \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/main.cpp \
+CMakeFiles/App.dir/main.cpp.o: /home/b6/Works/Cpp_/2.OpenCV/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -364,8 +363,10 @@ CMakeFiles/App.dir/main.cpp.o: \
  /usr/local/include/opencv4/opencv2/video.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/image_functions.h \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/video_functions.h \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_image.h \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_video.h \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/app_tools.h
+ /home/b6/Works/Cpp_/2.OpenCV/src/image_functions.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/app_tools.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/video_functions.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/interactive_image.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/interactive_video.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/app_tools.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/document_scan.h

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/b6/Works/Cpp_practive_vscode/2.OpenCV/src -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -I/home/b6/Works/Cpp_/2.OpenCV/src -isystem /usr/local/include/opencv4
 
-CXX_FLAGS = -g
+CXX_FLAGS = 
 

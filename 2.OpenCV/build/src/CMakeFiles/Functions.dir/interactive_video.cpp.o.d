@@ -1,7 +1,7 @@
 src/CMakeFiles/Functions.dir/interactive_video.cpp.o: \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_video.cpp \
+ /home/b6/Works/Cpp_/2.OpenCV/src/interactive_video.cpp \
  /usr/include/stdc-predef.h \
- /home/b6/Works/Cpp_practive_vscode/2.OpenCV/src/interactive_video.h \
+ /home/b6/Works/Cpp_/2.OpenCV/src/interactive_video.h \
  /usr/local/include/opencv4/opencv2/opencv.hpp \
  /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/local/include/opencv4/opencv2/core.hpp \

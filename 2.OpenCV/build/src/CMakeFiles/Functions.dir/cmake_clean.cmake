@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Functions.dir/app_tools.cpp.o"
   "CMakeFiles/Functions.dir/app_tools.cpp.o.d"
+  "CMakeFiles/Functions.dir/document_scan.cpp.o"
+  "CMakeFiles/Functions.dir/document_scan.cpp.o.d"
   "CMakeFiles/Functions.dir/image_functions.cpp.o"
   "CMakeFiles/Functions.dir/image_functions.cpp.o.d"
   "CMakeFiles/Functions.dir/interactive_image.cpp.o"

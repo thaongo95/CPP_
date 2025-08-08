@@ -424,15 +424,19 @@ CMakeFiles/App.dir/main.cpp.o: ../main.cpp \
   /usr/local/include/opencv4/opencv2/video/tracking.hpp \
   /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
   ../src/image_functions.h \
+  ../src/app_tools.h \
   ../src/video_functions.h \
   ../src/interactive_image.h \
   ../src/interactive_video.h \
-  ../src/app_tools.h
+  ../src/app_tools.h \
+  ../src/document_scan.h
 
 
-../src/app_tools.h:
+../src/document_scan.h:
 
 ../src/video_functions.h:
+
+../src/app_tools.h:
 
 ../src/image_functions.h:
 
