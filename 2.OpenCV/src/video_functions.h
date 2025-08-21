@@ -3,7 +3,9 @@
 #include <opencv2/opencv.hpp>
 #include <string>
 
-void video_color_detection(const std::string& video_path);
+void hsv_detection(const std::string& video_path);
+
+void color_detection(const std::string& video_path);
 
 
 

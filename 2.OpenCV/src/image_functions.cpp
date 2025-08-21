@@ -1,6 +1,6 @@
 
 #include "image_functions.h"
-
+#include <cmath>
 
 cv::Mat canny_detection(const cv::Mat& image){
 	cv::Mat gray;
@@ -63,6 +63,13 @@ auto orb_detection(const cv::Mat& image,const int& nfeatures){ //input the gray 
 	return std::make_pair(keypoints, descriptors);
 }
 
+auto sift_detection(const cv::Mat& image){
+	cv::Ptr<cv::SIFT> sift = cv::SIFT::create();
+	std::vector<cv::KeyPoint> keypoints;
+	cv::Mat descriptors;
+	sift->detectAndCompute(image, cv::noArray(), keypoints, descriptors);
+	return std::make_pair(keypoints, descriptors);
+}
 
 cv::Mat image_matching(const cv::Mat& object_img,const cv::Mat& scene_img,const int& nfeatures){ //input gray images
 	
@@ -71,6 +78,7 @@ cv::Mat image_matching(const cv::Mat& object_img,const cv::Mat& scene_img,const 
     	cv::cvtColor(scene_img, scene, cv::COLOR_BGR2GRAY);
 	auto object_orb = orb_detection(object, nfeatures);
 	auto scene_orb = orb_detection(scene, nfeatures);
+	
 	cv::Ptr<cv::DescriptorMatcher> matcher = cv::DescriptorMatcher::create(cv::DescriptorMatcher::BRUTEFORCE_HAMMING);
 
 	std::vector<std::vector<cv::DMatch>> knn_matches;
@@ -175,4 +183,71 @@ cv::Mat color_detection(const cv::Mat& object, const double& erea_threshold, con
 	}
 	return img;
 }
+
+cv::Mat sharpen_image(const cv::Mat& image){
+    	cv::Mat copy;
+   	image.copyTo(copy);
+    	for (size_t i=1; i <image.rows-1; i++){
+    		for (size_t j = 1; j<image.cols-1; j++){
+    			if (image.at<uchar>(i,j) <= 255){
+	    			uchar value1 = image.at<uchar>(i-1,j);
+	    			uchar value2 = image.at<uchar>(i+1,j);
+	    			uchar value3 = image.at<uchar>(i,j-1);
+	    			uchar value4 = image.at<uchar>(i,j+1);
+	    			copy.at<uchar>(i,j) = image.at<uchar>(i,j)*5 - 
+	    				 (value1+value2+value3+value4); 
+	    		}
+    		}
+    	}
+    	return copy;
+}
+// cv::addWeighted
+cv::Mat image_add(const cv::Mat& image1, const cv::Mat& image2, const double& alpha){
+	cv::Mat result = cv::Mat::zeros(image1.size(), image1.type());
+	for (size_t i=0; i <image1.rows; i++){
+    		for (size_t j = 0; j<image1.cols; j++){
+    			result.at<cv::Vec3b>(i, j) = (1-alpha)*image1.at<cv::Vec3b>(i,j)+alpha*image2.at<cv::Vec3b>(i,j);
+    			//result.at<cv::Vec3b>(i, j)[1] = (1-alpha)*image1.at<cv::Vec3b>(i,j)[1]+alpha*image2.at<cv::Vec3b>(i,j)[1];
+    			//result.at<cv::Vec3b>(i, j)[2] = (1-alpha)*image1.at<cv::Vec3b>(i,j)[2]+alpha*image2.at<cv::Vec3b>(i,j)[2];
+    		}
+    	}
+	return result;
+}
+
+cv::Mat image_change(const cv::Mat& image, const double& alpha, const int& beta){
+	cv::Mat result = cv::Mat::zeros(image.size(), image.type());
+	for (size_t i=0; i <image.rows; i++){
+    		for (size_t j = 0; j<image.cols; j++){
+    			for (size_t c=0; c< image.channels(); c++){
+    				result.at<cv::Vec3b>(i, j)[c] = cv::saturate_cast<uchar>(alpha*image.at<cv::Vec3b>(i,j)[c]+beta);
+    			}
+    		}
+    	}
+    	return result;
+}
+
+cv::Mat gammaCorrection(const cv::Mat& img,const double& gamma){
+	CV_Assert(gamma>=0);
+	cv::Mat lookUpTable(1, 256, CV_8U);
+	uchar* p = lookUpTable.ptr();
+	
+	for (int i=0; i<256; ++i){
+		p[i] = cv::saturate_cast<uchar>(pow(i/255.0, gamma)*255.0);
+	}
+	cv::Mat res;
+	cv::LUT(img, lookUpTable, res);
+	return res;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 

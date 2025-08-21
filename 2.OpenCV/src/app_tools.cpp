@@ -32,3 +32,14 @@ void save_img(const std::string& name, const cv::Mat& image){
         	std::cout << "Fail to save image" << std::endl;
         }
 }
+cv::Mat draw_shape(const cv::Mat& image){
+	cv::Mat result = image.clone();
+	cv::circle(result, cv::Point(result.cols/2, result.rows/2), 10, cv::Scalar(0, 255, 255), cv::FILLED, cv::LINE_8);
+    	cv::circle(result, cv::Point(result.cols/2, result.rows/2), 50, cv::Scalar(0, 255, 255), 2.0, cv::LINE_8);
+    	cv::ellipse(result, cv::Point(result.cols/2, result.rows/2),cv::Size(50,100), 45, 0, 360, cv::Scalar(0, 0, 255), 2.0, cv::LINE_AA);
+    	cv::ellipse(result, cv::Point(result.cols/2, result.rows/2),cv::Size(50,100), 90, 0, 360, cv::Scalar(0, 0, 255), 2.0, cv::LINE_AA);
+    	cv::ellipse(result, cv::Point(result.cols/2, result.rows/2),cv::Size(50,100), 135, 0, 360, cv::Scalar(0, 0, 255), 2.0, cv::LINE_AA);
+    	cv::ellipse(result, cv::Point(result.cols/2, result.rows/2),cv::Size(50,100), 180, 0, 360, cv::Scalar(0, 0, 255), 2.0, cv::LINE_AA);
+    	return result;
+}
+

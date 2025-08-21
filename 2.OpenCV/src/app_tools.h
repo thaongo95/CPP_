@@ -13,6 +13,6 @@ void imgInfo(const cv::Mat& img);
 cv::Mat read_img(const std::string& name);
 void save_img(const std::string& name, const cv::Mat& image);
 
-
+cv::Mat draw_shape(const cv::Mat& image);
 
 #endif

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 
 
 project(Test)
-#find_package(OpenCV REQUIRED)
+find_package(OpenCV REQUIRED)
 
 set(RESOURCE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/assets)
 set(RESOURCE_DEST_DIR ${CMAKE_CURRENT_BINARY_DIR}/assets)
