@@ -1,0 +1,6 @@
+/home/b6/Works/Cpp_/4.Geo_Stitcher/build/CMakeFiles/App.dir
+/home/b6/Works/Cpp_/4.Geo_Stitcher/build/CMakeFiles/edit_cache.dir
+/home/b6/Works/Cpp_/4.Geo_Stitcher/build/CMakeFiles/rebuild_cache.dir
+/home/b6/Works/Cpp_/4.Geo_Stitcher/build/sources/CMakeFiles/SOURCES.dir
+/home/b6/Works/Cpp_/4.Geo_Stitcher/build/sources/CMakeFiles/edit_cache.dir
+/home/b6/Works/Cpp_/4.Geo_Stitcher/build/sources/CMakeFiles/rebuild_cache.dir

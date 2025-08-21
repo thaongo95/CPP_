@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSOURCES.a CMakeFiles/SOURCES.dir/utils.cpp.o CMakeFiles/SOURCES.dir/stitching_images.cpp.o
+/usr/bin/ranlib libSOURCES.a
