@@ -1,3 +1,5 @@
 Makefile linguist-detectable=false
 *.mk linguist-detectable=false
+Makefile linguist-generated=true
+*.mk linguist-generated=true
 
