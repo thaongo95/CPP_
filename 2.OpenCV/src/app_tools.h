@@ -12,7 +12,7 @@ enum class Color {RED, GREEN, BLUE, YELLOW, BLACK};
 void imgInfo(const cv::Mat& img);
 cv::Mat read_img(const std::string& name);
 void save_img(const std::string& name, const cv::Mat& image);
-
+cv::Mat flip(const cv::Mat& image, const std::string& type);
 cv::Mat draw_shape(const cv::Mat& image);
 
 #endif

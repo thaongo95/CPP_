@@ -10,8 +10,9 @@ cv::Mat canny_detection(const cv::Mat& image){
         cv::GaussianBlur(gray, blur, cv::Size(5,5), 1.5);
 
         cv::Mat canny;
-        double low_threshold = 150;
-        double high_threshold = 300;
+        double low_threshold = 100;
+        double high_threshold = low_threshold*3;
+        //Canny recommended a upper:lower ratio between 2:1 and 3:1.
         cv::Canny(blur, canny, low_threshold, high_threshold);
 
         return canny;
@@ -240,14 +241,246 @@ cv::Mat gammaCorrection(const cv::Mat& img,const double& gamma){
 }
 
 
+cv::Mat sober_filter_3x3(const cv::Mat& image){
+	cv::Mat gray, grad;
+	cv::Mat grad_x, grad_y;
+	cv::Mat abs_grad_x, abs_grad_y;
+	cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
+	cv::Mat horizontal = (cv::Mat_<float>(3,3) <<
+		-1, 0, 1,
+		-2, 0, 2,
+		-1, 0, 1);
+	cv::Mat vertical = (cv::Mat_<float>(3,3) <<
+		-1, -2, -1,
+		0, 0, 0,
+		1, 2, 1);
+	cv::filter2D(gray, grad_x, -1, horizontal, cv::Point(-1,-1));		
+	cv::filter2D(gray, grad_y, -1, vertical, cv::Point(-1,-1));
+	cv::convertScaleAbs(grad_x, abs_grad_x);
+	cv::convertScaleAbs(grad_y, abs_grad_y);
+	cv::addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0, grad);
+	return grad;
+}
+cv::Mat sober_filter_5x5(const cv::Mat& image){
+	cv::Mat gray, grad;
+	cv::Mat grad_x, grad_y;
+	cv::Mat abs_grad_x, abs_grad_y;
+	cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
+	cv::Mat horizontal = (cv::Mat_<float>(5,5) <<
+		-3, -1, 0, 1, 3, 
+		-10, -2, 0, 2, 10,
+		-10, -2, 0, 2, 10,
+		-10, -2, 0, 2, 10,
+		-3, -1, 0, 1, 3);
+	cv::Mat vertical = (cv::Mat_<float>(5,5) <<
+		-3, -10, -10, -10, -3, 
+		-1, -2, -2, -2, -1,
+		0, 0, 0, 0, 0,
+		1, 2, 2, 2, 1,
+		3, 10, 10, 10, 3);
+	cv::filter2D(gray, grad_x, -1, horizontal, cv::Point(-1,-1));		
+	cv::filter2D(gray, grad_y, -1, vertical, cv::Point(-1,-1));
+	cv::convertScaleAbs(grad_x, abs_grad_x);
+	cv::convertScaleAbs(grad_y, abs_grad_y);
+	cv::addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0, grad);
+	return grad;
+}
+cv::Mat scharr_filter_3x3(const cv::Mat& image){
+	cv::Mat gray, grad;
+	cv::Mat grad_x, grad_y;
+	cv::Mat abs_grad_x, abs_grad_y;
+	cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
+	cv::Mat horizontal = (cv::Mat_<float>(3,3) <<
+		-3, 0, 3,
+		-10, 0, 10,
+		-3, 0, 3);
+	cv::Mat vertical = (cv::Mat_<float>(3,3) <<
+		-3, -10, -3,
+		0, 0, 0,
+		3, 10, 3);
+	cv::filter2D(gray, grad_x, -1, horizontal, cv::Point(-1,-1));		
+	cv::filter2D(gray, grad_y, -1, vertical, cv::Point(-1,-1));
+	cv::convertScaleAbs(grad_x, abs_grad_x);
+	cv::convertScaleAbs(grad_y, abs_grad_y);
+	cv::addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0, grad);
+	return grad;
+}
 
 
+cv::Mat hough_line(const cv::Mat& image){
+	cv::Mat canny = canny_detection(image);
+	cv::Mat std_hl, pos_hl;
+	cv::cvtColor(canny, std_hl, cv::COLOR_GRAY2BGR);
+	pos_hl = std_hl.clone();
+	std::cout << "isgood" << std::endl;
+	std::vector<cv::Vec2f> lines;
+	cv::HoughLines(canny, lines, 1, CV_PI/180, 150, 0, 0);
+	
+	for (size_t i=0; i< lines.size(); i++){
+		float rho = lines[i][0], theta = lines[i][1];
+		cv::Point pt1, pt2;
+		double a = cos(theta), b = sin(theta);
+		double x0 = a*rho, y0 = b*rho;
+		pt1.x = cvRound(x0 + 1000*(-b));
+        	pt1.y = cvRound(y0 + 1000*(a));
+        	pt2.x = cvRound(x0 - 1000*(-b));
+        	pt2.y = cvRound(y0 - 1000*(a));
+        	cv::line(std_hl,  pt1, pt2, cv::Scalar(0,0,255), 1, cv::LINE_AA);
+	}
+	
+	std::vector<cv::Vec4i> linesP;
+	cv::HoughLinesP(canny, linesP, 1, CV_PI/180, 50, 50, 10);
+	
+	for (size_t i=0; i< linesP.size(); i++){
+		cv::Vec4i l = linesP[i];
+		cv::line(pos_hl, cv::Point(l[0], l[1]), cv::Point(l[2], l[3]), cv::Scalar(0,0,255), 1, cv::LINE_AA);
+	}
+	
+	imshow("Source", image);
+    	imshow("Detected Lines (in red) - Standard Hough Line Transform", std_hl);
+    	imshow("Detected Lines (in red) - Probabilistic Line Transform", pos_hl);
+    	return pos_hl;
+}
+
+cv::Mat hough_circle(const cv::Mat& image){
+	cv::Mat gray;
+	cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
+	std::vector<cv::Vec3f> circles;
+	cv::medianBlur(gray, gray, 5);
+	
+	cv::HoughCircles(gray, circles, cv::HOUGH_GRADIENT, 1,
+			gray.rows/16,
+			100, 30, 1, 300);
+	for (size_t i=0; i< circles.size(); i++){
+		cv::circle(image, cv::Point(circles[i][0], circles[i][1]), circles[i][2],
+		                    cv::Scalar(0,255,0), 3, cv::LINE_AA);
+		std::cout << "hhh" << std::endl;
+	}
+	//cv::imshow("Image", image);
+	return image;
+}
 
 
+cv::Mat hough_detect(const cv::Mat& image, const cv::Mat& templ){
+	cv::Mat gray, templ_gray;
+	cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
+	cv::cvtColor(templ, templ_gray, cv::COLOR_BGR2GRAY);
+	if (templ_gray.type() != CV_8UC1) {
+	    templ_gray.convertTo(templ_gray, CV_8UC1);
+	}
+	std::vector<cv::Vec4f> positionBallard, positionGuil;
+	
+	int templ_w = templ.cols;
+	int templ_h = templ.rows;
+	std::cout << "->Loaded image! " << std::endl;
+	
+	cv::Ptr<cv::GeneralizedHoughBallard> ballard = cv::createGeneralizedHoughBallard();
+	ballard->setMinDist(10);
+	ballard->setLevels(360);
+	ballard->setDp(2);
+	ballard->setMaxBufferSize(1000);
+	ballard->setVotesThreshold(40);
+	
+	ballard->setCannyLowThresh(30);
+	ballard->setCannyHighThresh(110);
+	ballard->setTemplate(templ_gray);
+	std::cout << "->Created Generalized Hough Ballard" << std::endl;
+	
+	cv::Ptr<cv::GeneralizedHoughGuil> guil = cv::createGeneralizedHoughGuil();
+	guil->setMinDist(10);
+	guil->setLevels(360);
+	guil->setDp(3);
+	guil->setMaxBufferSize(1000);
+	
+	guil->setMinAngle(0);
+	guil->setMaxAngle(360);
+	guil->setAngleStep(1);
+	guil->setAngleThresh(1500);
+	
+	guil->setMinScale(0.5);
+	guil->setMaxScale(2.0);
+	guil->setScaleStep(0.05);
+	guil->setScaleThresh(50);
+	
+	guil->setPosThresh(10);
+	
+	guil->setCannyLowThresh(30);
+	guil->setCannyHighThresh(110);
+	guil->setTemplate(templ_gray);
+	std::cout << "->Created Generalized Hough Guil" << std::endl;
+	
+	std::cout << "Ballard detecting.." << std::endl;
+	ballard->detect(gray, positionBallard);
+	std::cout << "->Detected" << std::endl;
+	std::cout << "Guil detecting.." << std::endl;
+	guil->detect(gray, positionGuil);
+	std::cout << "->Detected" << std::endl;
+	for (auto iter = positionBallard.begin(); iter!=positionBallard.end(); iter++){
+		cv::RotatedRect rrect = cv::RotatedRect(cv::Point2f((*iter)[0],(*iter)[1]),
+				cv::Size2f(templ_w*(*iter)[2], templ_h*(*iter)[2]), (*iter)[3]);
+		cv::Point2f vertices[4];
+		rrect.points(vertices);
+		
+		for (int i=0; i<4; i++){
+			cv::line(image, vertices[i], vertices[(i+1)%4], cv::Scalar(0,255,0), 2);
+		}
+	}
+	for (auto iter = positionGuil.begin(); iter!=positionGuil.end(); iter++){
+		cv::RotatedRect rrect = cv::RotatedRect(cv::Point2f((*iter)[0],(*iter)[1]),
+				cv::Size2f(templ_w*(*iter)[2], templ_h*(*iter)[2]), (*iter)[3]);
+		cv::Point2f vertices[4];
+		rrect.points(vertices);
+		
+		for (int i=0; i<4; i++){
+			cv::line(image, vertices[i], vertices[(i+1)%4], cv::Scalar(255,0,0), 2);
+		}
+	}
+	return image;
+}
 
+cv::Mat warp_(const cv::Mat& image){ 
+	cv::Point2f srcTri[3];
+	srcTri[0] = cv::Point2f(0.f,0.f);
+	srcTri[1] = cv::Point2f(image.cols - 1.f,0.f);
+	srcTri[2] = cv::Point2f(0.f,image.rows - 1.f);
 
+	cv::Point2f dstTri[3];
+	dstTri[0] = cv::Point2f(0.f,image.cols*0.33f);
+	dstTri[1] = cv::Point2f(image.cols*0.85f ,image.cols*0.25f);
+	dstTri[2] = cv::Point2f(image.cols*0.15f ,image.cols*0.7f);
 
+	cv::Mat warp_mat = cv::getAffineTransform(srcTri, dstTri);
+	std::cout << warp_mat << std::endl;
+	cv::Mat warp_dst = cv::Mat::zeros(image.size(), image.type());
+	cv::warpAffine(image, warp_dst, warp_mat, warp_dst.size());
+	return warp_dst;
+}
+cv::Mat rotation_(const cv::Mat& image, const double& angle, const double& scale){ 
+	cv::Point center = cv::Point(image.cols/2, image.rows/2);
+	cv::Mat rotate_mat = cv::getRotationMatrix2D(center, angle, scale);
+	std::cout << rotate_mat << std::endl;
+	cv::Mat rotate_dst = cv::Mat::zeros(image.size(), image.type());
+	cv::warpAffine(image, rotate_dst, rotate_mat, rotate_dst.size());
+	return rotate_dst;
+}
 
-
+cv::Mat changeIcon(const std::string& data_path){
+	cv::Mat img = cv::imread(image_path+data_path, cv::IMREAD_UNCHANGED);
+	if (img.channels() < 4) {
+		std::cerr << "Image does not have alpha channel!" << std::endl;
+	}
+	std::vector<cv::Mat> channels;
+	cv::split(img, channels);
+	cv::Mat b = channels[0];
+	cv::Mat g = channels[1];
+	cv::Mat r = channels[2];
+	cv::Mat alpha = channels[3];
+	
+	cv::Scalar newColor(255, 255, 255);
+	cv::Mat recolored(img.size(), CV_8UC3, newColor);
+	cv::Mat output;
+	cv::merge(std::vector<cv::Mat>{recolored, alpha}, output);
+	return output;
+}
 
 

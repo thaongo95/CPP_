@@ -27,9 +27,9 @@ int main(int argc,char* argv[]) {
     cv::Mat edges = canny_detection(object_img);
     save_img("edges.jpg", edges);*/
     
-    const std::string file_path = video_path + "test_video.mp4";
+    //const std::string file_path = video_path + "test_video.mp4";
     //interactive_video(file_path);
-    color_detection(file_path);
+    //color_detection(file_path);
     
     //imgInfo(img);
     //interactive_image(&scene_img);
@@ -83,7 +83,72 @@ int main(int argc,char* argv[]) {
     threshold_img(&img);
     */
     
+    /*
+    cv::Mat img = read_img("cards.jpg");
+    cv::Mat gray,result1, result2, result3, result4, result5;
+    cv::cvtColor(img, gray, cv::COLOR_BGR2GRAY);
+    result1 = sober_filter_3x3(img);
+    result2 = scharr_filter_3x3(img);
+    result3 = sober_filter_5x5(img);
+    int ddepth = CV_8U;
+    cv::Laplacian(gray, result4, ddepth, 3, 1, 0, cv::BORDER_DEFAULT);
+    result5 = canny_detection(img);
+    cv::imshow("Gray", gray);
+    cv::imshow("Sober", result1);
+    cv::imshow("Scharr", result2);
+    cv::imshow("5x5", result3);
+    cv::imshow("Laplacian", result4);
+    cv::imshow("Canny", result4);
+    */
+    /*
+    cv::Mat img = read_img("shapes.png");
+    cv::Mat line_img = hough_line(img);
+    cv::imshow("Image", line_img);
+    cv::Mat circle_img = hough_circle(img);
+    cv::imshow("Circle", circle_img);
+    */
     
+    /*cv::Mat image = read_img("generalized_hough_mini_image.jpg");
+    cv::Mat templ = read_img("generalized_hough_mini_template.jpg");
+    cv::Mat result = hough_detect(image, templ);
+    cv::imshow("object detect", result);*/
+    
+    /*
+    cv::Mat image = read_img("cards.jpg");
+    cv::Mat result = warp_(image);
+    cv::Mat rotate_img = rotation_(image, -50, 1);
+    cv::resize(rotate_img,rotate_img, cv::Size(640, 480));
+    cv::imshow("Wrap", result); 
+    cv::imshow("Rotation", rotate_img);*/
+    
+    /*std::vector<std::string> images_data{"aerial.png","home.png","clock.png","letter-y.png","placeholder.png","speed.png", "letter-r.png", "letter-p.png"};
+    for (auto data:images_data){
+    	cv::Mat img = changeIcon(data);
+    	save_img("black_" + data, img);
+    }*/
+    
+    cv::Mat image = read_img("side.jpg");
+    int count_b=0, count_all=0;
+    for (size_t i=0; i <image.rows; i++){
+		for (size_t j = 0; j<image.cols; j++){
+			if ((image.at<cv::Vec3b>(i, j)[0]<=90)&&(image.at<cv::Vec3b>(i, j)[1]<=80)&&(image.at<cv::Vec3b>(i, j)[2]<=80)) {
+				image.at<cv::Vec3b>(i, j)[0] =1;
+				image.at<cv::Vec3b>(i, j)[1] =1;
+				image.at<cv::Vec3b>(i, j)[2] =1;
+				count_b+=1;
+			}
+			else {
+				image.at<cv::Vec3b>(i, j)[0] =255;
+				image.at<cv::Vec3b>(i, j)[1] =255;
+				image.at<cv::Vec3b>(i, j)[2] =255;
+			}
+			count_all+=1;
+		}
+	}
+    double x = (double)count_b/count_all*5000;
+    std::cout << x << std::endl;
+    //get_mouse_info(&image);
+    cv::imshow("IMG", image); 
     cv::waitKey(0);
     return 0;
     

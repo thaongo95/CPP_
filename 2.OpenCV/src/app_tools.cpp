@@ -32,6 +32,28 @@ void save_img(const std::string& name, const cv::Mat& image){
         	std::cout << "Fail to save image" << std::endl;
         }
 }
+
+cv::Mat flip(const cv::Mat& image, const std::string& type){
+	cv::Mat result = image.clone();
+	if (type == "horizontal"){
+		for (size_t i = 0; i<image.rows; i++){
+			for(size_t j=0; j< image.cols;j++){
+				for (size_t c=0; c< image.channels(); c++){
+    					result.at<cv::Vec3b>(i,j)[c] = image.at<cv::Vec3b>(image.rows-i-1,j)[c];
+    				}
+				 
+			}
+		}
+	}
+	else if (type == "vertical"){
+		for (size_t i = 0; i<image.rows; i++){
+			for(size_t j=0; j< image.cols;j++){
+				result.at<cv::Vec3b>(i,j) = image.at<cv::Vec3b>(i,image.cols-j-1); 
+			}
+		}
+	}
+	return result;	
+}
 cv::Mat draw_shape(const cv::Mat& image){
 	cv::Mat result = image.clone();
 	cv::circle(result, cv::Point(result.cols/2, result.rows/2), 10, cv::Scalar(0, 255, 255), cv::FILLED, cv::LINE_8);
