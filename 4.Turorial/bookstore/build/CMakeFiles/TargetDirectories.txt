@@ -1,3 +1,0 @@
-/home/thao/Work/seeProjects/bookstore/build/CMakeFiles/rebuild_cache.dir
-/home/thao/Work/seeProjects/bookstore/build/CMakeFiles/edit_cache.dir
-/home/thao/Work/seeProjects/bookstore/build/CMakeFiles/BookShop.dir

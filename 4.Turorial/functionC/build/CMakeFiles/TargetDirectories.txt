@@ -1,3 +1,0 @@
-/home/thao/Work/seeProjects/functionC/build/CMakeFiles/rebuild_cache.dir
-/home/thao/Work/seeProjects/functionC/build/CMakeFiles/edit_cache.dir
-/home/thao/Work/seeProjects/functionC/build/CMakeFiles/RUN.dir
