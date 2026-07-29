@@ -1,0 +1,6 @@
+module serial_reader
+typeinfo appserial_reader.qmltypes
+prefer :/qt/qml/serial_reader/
+Main 1.0 Main.qml
+depends QtQuick
+

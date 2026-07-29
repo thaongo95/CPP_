@@ -1,0 +1,3 @@
+set(__QT_DEPLOY_TARGET_appserial_reader_FILE C:/Users/UAV_Z113/Documents/serial_reader/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/appserial_reader.exe)
+set(__QT_DEPLOY_TARGET_appserial_reader_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_appserial_reader_RUNTIME_DLLS C:/Qt/6.10.0/mingw_64/bin/Qt6Quick.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6SerialPort.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6QmlMeta.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6QmlWorkerScript.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6QmlModels.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Qml.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Network.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Core.dll)

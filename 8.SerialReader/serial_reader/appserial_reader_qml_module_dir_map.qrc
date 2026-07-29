@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/qt/qml/serial_reader">C:/Users/UAV_Z113/Documents/serial_reader/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/serial_reader</file>
+
+  </qresource>
+</RCC>
