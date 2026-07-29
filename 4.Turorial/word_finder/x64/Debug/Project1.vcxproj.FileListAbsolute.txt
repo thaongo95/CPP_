@@ -1,0 +1,2 @@
+D:\Works\Cpp_practive_vs22\Project1\x64\Debug\Find_word.exe
+D:\Works\Cpp_practive_vs22\word_finder\x64\Debug\Find_word.exe

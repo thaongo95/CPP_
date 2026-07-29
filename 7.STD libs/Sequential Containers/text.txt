@@ -1,6 +1,0 @@
-books 10.99 6
-plugin 12.99 3
-cup 6.99 12
-pen 3.99 9
-notebook 4.99 12
-

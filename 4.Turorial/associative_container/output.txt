@@ -1,0 +1,32 @@
+Conversation 1: 
+Alice: Hey! What's up? 
+Bob: Not much, just chilling. You? 
+Alice: Same here. By the way, did you finish the project? 
+Bob: I don't know, still working on it. Shaking my head, it's taking forever. 
+Alice: Laughing out loud, I feel you. Got to go soon, though. 
+Bob: No worries. Talk to you later! 
+Alice: Talk to you later! 
+----------------------------- 
+Conversation 2: 
+Charlie: In real life meetup this weekend? 
+Dana: Sure! When and where? 
+Charlie: Saturday, 3 PM at the park. 
+Dana: Sounds good. I'll be there As soon as possible. 
+Charlie: Cool, don't be late! 
+Dana: Never mind, just got reminded of a prior engagement. 
+Charlie: Oh, okay. Let me know if plans change. 
+Dana: Will do. For your information, we should plan something next weekend too. 
+Charlie: Definitely! Talk to you later. 
+Dana: Talk to you later! 
+------------------------------ 
+Conversation 3: 
+Eve: Oh my God, did you see the latest episode? 
+Frank: Rolling on the floor laughing, yes! It was hilarious! 
+Eve: IKR? To be honest, I didn't expect that twist. 
+Frank: Same here. By the way, any plans tonight? 
+Eve: Nope, just gonna relax. You? 
+Frank: Going to a party. Fear of missing out if I don't go, Laughing out loud. 
+Eve: Have fun! Before you go, can you send me that link? 
+Frank: Sure, Thanks in advance! 
+Eve: No problem. Ta-ta for now! 
+Frank: Ta-ta for now! 

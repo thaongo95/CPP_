@@ -1,0 +1,3 @@
+educated_book 1 10.99
+pencils 5 2.99
+keyboard 1 12.99

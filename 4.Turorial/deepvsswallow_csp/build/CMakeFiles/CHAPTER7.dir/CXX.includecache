@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thao/Work/seeProjects/chapter7/deepcopy.h
+iostream
+-
+
+/home/thao/Work/seeProjects/chapter7/friend_class/thang.h
+thao.h
+/home/thao/Work/seeProjects/chapter7/friend_class/thao.h
+
+/home/thao/Work/seeProjects/chapter7/friend_class/thao.cpp
+thao.h
+/home/thao/Work/seeProjects/chapter7/friend_class/thao.h
+
+/home/thao/Work/seeProjects/chapter7/friend_class/thao.h
+iostream
+-
+string
+-
+
+/home/thao/Work/seeProjects/chapter7/main.cpp
+friend_class/thao.h
+/home/thao/Work/seeProjects/chapter7/friend_class/thao.h
+friend_class/thang.h
+/home/thao/Work/seeProjects/chapter7/friend_class/thang.h
+friend_class/thao.cpp
+/home/thao/Work/seeProjects/chapter7/friend_class/thao.cpp
+deepcopy.h
+/home/thao/Work/seeProjects/chapter7/deepcopy.h
+shallowcopy.h
+/home/thao/Work/seeProjects/chapter7/shallowcopy.h
+
+/home/thao/Work/seeProjects/chapter7/shallowcopy.h
+iostream
+-
+

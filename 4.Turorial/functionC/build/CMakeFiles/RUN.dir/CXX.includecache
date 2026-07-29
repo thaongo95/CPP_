@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/card.h
+string
+-
+iostream
+-
+
+../include/frenchdeck.h
+vector
+-
+string
+-
+card.h
+../include/card.h
+
+/home/thao/Work/seeProjects/functionC/sources/frenchdeck.cpp
+frenchdeck.h
+/home/thao/Work/seeProjects/functionC/sources/frenchdeck.h
+

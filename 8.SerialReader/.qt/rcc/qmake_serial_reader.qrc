@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/serial_reader">
-    <file alias="qmldir">C:/Users/UAV_Z113/Documents/serial_reader/build/Desktop_Qt_6_10_0_MinGW_64_bit-Release/serial_reader/qmldir</file>
-  </qresource>
-</RCC>
-

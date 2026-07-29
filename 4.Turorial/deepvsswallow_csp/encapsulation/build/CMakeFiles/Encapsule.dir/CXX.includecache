@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thao/Work/seeProjects/classC/encapsulation/encapsule.cpp
+encapsule.h
+/home/thao/Work/seeProjects/classC/encapsulation/encapsule.h
+iostream
+-
+
+/home/thao/Work/seeProjects/classC/encapsulation/encapsule.h
+string
+-
+

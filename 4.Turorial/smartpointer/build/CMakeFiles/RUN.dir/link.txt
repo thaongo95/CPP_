@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/RUN.dir/shared_pointer.cpp.o  -o RUN  lib/libSmartPtr.a 

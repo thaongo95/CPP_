@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thao/Work/seeProjects/smartpointer/lib/smart_pointer.cpp
+smart_pointer.h
+/home/thao/Work/seeProjects/smartpointer/lib/smart_pointer.h
+
+/home/thao/Work/seeProjects/smartpointer/lib/smart_pointer.h
+iostream
+-
+

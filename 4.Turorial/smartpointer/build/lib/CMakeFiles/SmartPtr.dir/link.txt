@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSmartPtr.a  CMakeFiles/SmartPtr.dir/smart_pointer.cpp.o
+/usr/bin/ranlib libSmartPtr.a

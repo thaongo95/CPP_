@@ -1,0 +1,7 @@
+"A" appear 2 times
+"The" appear 8 times
+"a" appear 13 times
+"an" appear 2 times
+"and" appear 9 times
+"or" appear 3 times
+"the" appear 14 times
